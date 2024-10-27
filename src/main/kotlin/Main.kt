@@ -1,9 +1,28 @@
 package io.genry.wooko
 
 fun main() {
-//    makeComplement("ATTGC")
-    longest(s1 = "xyaabbbccccdefww", s2 = "xxxxyyyyabklmopq")
+//   makeComplement("ATTGC")
+//   longest(s1 = "xyaabbbccccdefww", s2 = "xxxxyyyyabklmopq")
+    accum("ZpglnRxqenU")
 }
+
+/**
+ *На этот раз без истории и теории. Примеры ниже показывают, как написать функцию `accum`:
+ * Examples:
+ * accum("abcd") -> "A-Bb-Ccc-Dddd"
+ * accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+ * accum("cwAt") -> "C-Ww-Aaa-Tttt"
+ * Параметр функции accum — это строка, которая включает только буквы от a до z и от A до Z.
+ */
+fun accum(s: String): String {
+    var string = ""
+    s.forEachIndexed { index, char ->
+        val d = if (index == s.lastIndex) "" else "-"
+        string += (char.uppercase() + (char.lowercase().repeat(index)) + d)
+    }
+    return string
+}
+
 
 /**
  * Возьмите 2 строки s1 и s2, содержащие только буквы от a до z.
@@ -16,7 +35,7 @@ fun main() {
  *
  * a = "abcdefghijklmnopqrstuvwxyz"
  * longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
- * */
+ */
 
 fun longest(s1: String, s2: String): String {
     return (s1 + s2).toSortedSet().joinToString("")

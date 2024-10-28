@@ -1,5 +1,4 @@
-import functions.find
-import functions.findShort
+import functions.high
 
 fun main() {
 //   makeComplement("ATTGC")
@@ -7,7 +6,8 @@ fun main() {
 //   accum("ZpglnRxqenU")
 //    disemvowel("This website is for losers LOL!")
 //    find(arrayOf(160, 3, 1719, 19, 11, 13, -21))
-    findShort("bitcoin take over the world maybe who knows perhaps")
+//    findShort("bitcoin take over the world maybe who knows perhaps")
+    high("man i need a taxi up to ubud")
 }
 
 

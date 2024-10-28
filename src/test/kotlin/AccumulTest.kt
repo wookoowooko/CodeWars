@@ -1,4 +1,4 @@
-import io.genry.wooko.accum
+import functions.accum
 import org.junit.jupiter.api.Assertions.assertEquals
 import kotlin.test.Test
 
@@ -9,7 +9,7 @@ class AccumulTest {
 
     @Test
     fun test() {
-        println("Fixed Tests accum")
+        println("Fixed FixedTests accum")
         testing(accum("ZpglnRxqenU"), "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu")
         testing(accum("NyffsGeyylB"), "N-Yy-Fff-Ffff-Sssss-Gggggg-Eeeeeee-Yyyyyyyy-Yyyyyyyyy-Llllllllll-Bbbbbbbbbbb")
 
